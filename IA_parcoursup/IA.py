@@ -13,31 +13,35 @@ with open('database/fr-esr-parcoursup_mpsi.csv', 'r') as fichier:
         data.append(row)
     fichier.close()
 
-print(" ")
-print(" ")
-print(" ")
-print(" ")
-
-DATA = []
-
-for i in range(len(data)):
-    DATA.append(data[i]['Session'])
-    DATA.append(data[i]['Ã‰tablissement'])
-    DATA.append(data[i]['Lien de la formation sur la plateforme Parcoursup'])
-    DATA.append(data[i]['CapacitÃ© de lâ€™Ã©tablissement par formation'])
-    DATA.append(data[i]['Effectif total des candidats pour une formation'])
-    DATA.append(data[i]['Effectif total des candidats ayant reÃ§u une proposition dâ€™admission de la part de lâ€™Ã©tablissement'])
-    DATA.append(data[i]['Effectif total des candidats ayant acceptÃ© la proposition de lâ€™Ã©tablissement (admis)'])
-    DATA.append(data[i]['Dont effectif des admis issus du mÃªme Ã©tablissement (BTS/CPGE)'])
-    DATA.append(data[i]['Dont effectif des admis issus de la mÃªme acadÃ©mie'])
-    DATA.append(data[i]['Rang du dernier appelÃ© du groupe 1'])
-    DATA.append(data[i]['Indicateur Parcoursup du taux dâ€™accÃ¨s des candidats ayant postulÃ© Ã  la formation (ratio entre le dernier appelÃ© et le dernier classÃ©)'])
-
-
 K = data[0].keys()
 Keys_list = []
+Keys_list_end = []
+
+Keys_list_end.append('Session')
+Keys_list_end.append('Ã‰tablissement')
+Keys_list_end.append('Lien de la formation sur la plateforme Parcoursup')
+Keys_list_end.append('CapacitÃ© de lâ€™Ã©tablissement par formation')
+Keys_list_end.append('Effectif total des candidats pour une formation')
+Keys_list_end.append('Effectif total des candidats ayant reÃ§u une proposition dâ€™admission de la part de lâ€™Ã©tablissement')
+Keys_list_end.append('Effectif total des candidats ayant acceptÃ© la proposition de lâ€™Ã©tablissement (admis)')
+Keys_list_end.append('Dont effectif des admis issus du mÃªme Ã©tablissement (BTS/CPGE)')
+Keys_list_end.append('Dont effectif des admis issus de la mÃªme acadÃ©mie')
+Keys_list_end.append('Rang du dernier appelÃ© du groupe 1')
+Keys_list_end.append('Indicateur Parcoursup du taux dâ€™accÃ¨s des candidats ayant postulÃ© Ã  la formation (ratio entre le dernier appelÃ© et le dernier classÃ©)')
 
 for i in K:
     Keys_list.append(i)
 
-print(Keys_list)
+for i in range(len(Keys_list)):
+    key = Keys_list[i]
+    for w in range(len(Keys_list_end)):
+        if key == Keys_list_end[w]:
+            V = True
+            break
+        else:
+            V = False
+    if V == False:
+        for n in range(len(data)):
+            del data[n][key]
+
+print(data[0].keys())

@@ -3,12 +3,16 @@ import matplotlib.pyplot as plt
 from math import *
 import csv
 
+#entrer les infos importantes
+
 #av_prem = float(input("moyenne de l'annee de 1ere = "))
 #av_term1 = float(input("moyenne du 1er trimestre de terminal = "))
 #av_term2 = float(input("moyenne du 2eme trimestre de terminal = "))
 #av_mp_prem = float(input("moyenne des spé (maths/physique) de premiere = "))
 #av_mp_term1 = float(input("moyenne des spé (maths/physique) de terminal (1er trimestre) = "))
 #av_mp_term2 = float(input("moyenne des spé (maths/physique) de terminal (2eme trimestre) = "))
+
+#associer les infos à un score pour le comparer au score minimal estimé des écoles/prepa/uni...
 
 def point_eleve():
     z = (1/(np.std([av_mp_prem, av_term1, av_term2])))**0.2

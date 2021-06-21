@@ -14,8 +14,6 @@ import csv
 
 #associer les infos à un score pour le comparer au score minimal estimé des écoles/prepa/uni...
 
-#test du bot discord
-
 def point_eleve():
     z = (1/(np.std([av_mp_prem, av_term1, av_term2])))**0.2
     print(z)

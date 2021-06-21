@@ -1,0 +1,88 @@
+body{
+	text-decoration: none;
+	background-color: #0F0F0F;
+	display: list-item;
+	background-image: url("assets/background_gif.gif");
+}
+
+div#content{
+	display: inline-flex;
+	margin-bottom: 40px;
+}
+
+div.title{
+	text-align: center;
+}
+
+div.title p.title{
+	color: white;
+	font-size: 80px;
+	display: inline-block;
+	text-shadow: 4px 6px 8px #000000;
+}
+
+div.title p.title:hover{
+	color: white;
+	font-size: 80px;
+	display: inline-block;
+	text-shadow: 0px 0px 5px #ffffff;
+}
+
+div.content{
+	display: inline-block;
+	padding: 10px;
+	border: 2px solid #ffffff;
+	padding-right: 20px;
+}
+
+div.content:hover{
+	box-shadow: 0px 0px 25px #ffffff;
+}
+
+div.content div.github{
+	padding: 10px;
+	margin-left: 50px;
+	display: list-item;
+}
+
+div.content div.gitimg{
+	display: inline-flex;
+}
+
+div.content div.gitimg a{
+	padding: 10px;
+	margin-left: 40px;
+	display: inline-flex;
+	box-shadow: 4px 5px 10px #000000;
+}
+
+div.content div.gitimg a:hover{
+	display: inline-block;
+	margin-top: -10px;
+	margin-bottom: -10px;
+	margin-left: 40px;
+}
+
+div.content p{
+	color: white;
+	font-size: 35px;
+}
+
+div.video{
+	margin-left: 65px;
+	padding: 40px;
+}
+
+div.video iframe{
+	border: 2px solid #ffffff;
+}
+
+div.video iframe:hover{
+	border: 2px solid #ffffff;
+	box-shadow: 0px 0px 25px #ffffff;
+}
+
+footer{
+	background-color: #0A0A0A;
+	color: #ffffff;
+}

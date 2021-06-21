@@ -3,6 +3,21 @@ import matplotlib.pyplot as plt
 from math import *
 import csv
 
+#av_prem = float(input("moyenne de l'annee de 1ere = "))
+#av_term1 = float(input("moyenne du 1er trimestre de terminal = "))
+#av_term2 = float(input("moyenne du 2eme trimestre de terminal = "))
+#av_mp_prem = float(input("moyenne des spé (maths/physique) de premiere = "))
+#av_mp_term1 = float(input("moyenne des spé (maths/physique) de terminal (1er trimestre) = "))
+#av_mp_term2 = float(input("moyenne des spé (maths/physique) de terminal (2eme trimestre) = "))
+
+def point_eleve():
+    z = (1/(np.std([av_mp_prem, av_term1, av_term2])))**0.2
+    print(z)
+    s = (((av_prem + av_term1 + av_term2)/3) + 0.5*((av_mp_prem + av_mp_term1 + av_mp_term2)/3))/1.5
+    return(s)
+
+#print(point_eleve())
+
 #oubliez pas de commenter le code, perso je déteste faire ca mais bon...
 
 #j ai l impression que l utf-8 est pas supporté, pour avoir les key ect des dict faut ouvrir dans excel sinon ca prend en compte l utf-8
